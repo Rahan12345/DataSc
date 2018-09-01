@@ -14,8 +14,11 @@ print()
 
 """ Generating synthetic data """
 def gen_synth_data(n):
+    """ Concatenations of two Normal distribution matrices with n rows and 2 columns """ 
     points = np.concatenate((ss.norm(1,1).rvs((n,2)),ss.norm(2,1).rvs((n,2))))
+    """ Concatenation of repeating 0s and 1s """
     outcome = np.concatenate(( np.repeat(0,n), np.repeat(1,n) ))
+    """ Plotting points for the first n and second n sets """
     plt.plot(points[:n,0],points[:n,1],'bo')
     plt.plot(points[n:,0],points[n:,1],'ro')
     return points, outcome
@@ -34,6 +37,7 @@ plt.scatter(p[0],p[1], s = 50, c = 'g')
 def distance(points, p):
     dist = []
     for i in range(len(points)):
+        """ Calculating the distances and appending to the list dist """
         dist.append(np.round(np.sqrt( np.power( (p[0]-points[i,0]), 2) \
         + np.power( (p[1]-points[i,1]), 2) ), 3))
     return dist
