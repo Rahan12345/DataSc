@@ -78,12 +78,4 @@ vote = int(knn_classifier(out,10))
 """ Printing the classification result """
 print()
 print('The point '+str(tuple(p))+' belongs to the class: '+str(vote))
-
-
-
-def make_predictions(lim, h):
-    (xlow,xhigh,ylow,yhigh) = lim
-    xs = np.arange(xlow,xhigh,h)
-    ys = np.arange(ylow,yhigh,h)
-    xx = np.meshgrid(xs,ys)
     
