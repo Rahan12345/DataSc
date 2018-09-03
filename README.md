@@ -1,1 +1,1 @@
-Files above are not optimized for speed and memory usage and are best for beginners to get started on
+Files above are not optimized for speed and memory usage, and would be best suited for beginners.
